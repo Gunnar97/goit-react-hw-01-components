@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="App">
       <Profile {...user} />
-      {/* <Statistics {...data} /> */}
+      <Statistics data={data} />
     </div>
   );
 };

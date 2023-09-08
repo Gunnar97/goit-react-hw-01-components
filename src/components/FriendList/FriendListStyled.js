@@ -7,6 +7,7 @@ export const FriendList = styled.ul`
   gap: 12px;
   max-width: 450px;
   margin: 0 auto;
+  margin-bottom: 100px;
   padding: 12px 18px;
   background-color: #ffffff;
   border: 1px solid #e1e1e1;

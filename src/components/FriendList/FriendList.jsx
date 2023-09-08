@@ -1,19 +1,26 @@
 import React from 'react';
+import {
+  FriendItem,
+  FriendList,
+  FriendName,
+  FriendStatus,
+} from './FriendListStyled';
 
 const Profile = props => {
   const data = props.data;
 
-  const statsBlock = data.map(stat => {
+  const friendsList = data.map(stat => {
     return (
-      <ProfileStatItem key={stat[0]}>
-        <ProfileStatNameStat>{stat[0]}</ProfileStatNameStat>
-        <ProfileStatValueStat>{stat[1]}</ProfileStatValueStat>
-      </ProfileStatItem>
+      <FriendItem key={data.id}>
+        <FriendStatus isOnline={stat.isOnline}></FriendStatus>
+        <img class="avatar" src={stat.avatar} alt="User avatar" width="48" />
+        <FriendName>{stat.name}</FriendName>
+      </FriendItem>
     );
   });
   return (
     <>
-      <ul class="friend-list"></ul>
+      <FriendList>{friendsList}</FriendList>
     </>
   );
 };

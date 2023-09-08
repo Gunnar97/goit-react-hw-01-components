@@ -1,22 +1,33 @@
 import React from 'react';
-import { StatisticsSectionStayled } from './Statistics.Stylde';
+import {
+  StatisticsSectionItem,
+  StatisticsSectionItemLabel,
+  StatisticsSectionList,
+  StatisticsSectionPercentage,
+  StatisticsSectionStayled,
+  StatisticsSectionTitle,
+} from './Statistics.Stylde';
 
 const Statistics = props => {
   const data = props.data;
   const statsBlock = data.map(stat => {
     return (
-      <li key={stat.id} class="item">
-        <span class="label">{stat.label}</span>
-        <span class="percentage">{stat.percentage}</span>
-      </li>
+      <StatisticsSectionItem key={stat.id}>
+        <StatisticsSectionItemLabel>{stat.label}</StatisticsSectionItemLabel>
+        <StatisticsSectionPercentage>
+          {stat.percentage}
+        </StatisticsSectionPercentage>
+      </StatisticsSectionItem>
     );
   });
   return (
     <>
       <StatisticsSectionStayled>
-        <h2 class="title">{props.title || 'Upload stats'}</h2>
+        <StatisticsSectionTitle>
+          {props.title || 'Upload stats'}
+        </StatisticsSectionTitle>
 
-        <ul class="stat-list">{statsBlock}</ul>
+        <StatisticsSectionList>{statsBlock}</StatisticsSectionList>
       </StatisticsSectionStayled>
     </>
   );

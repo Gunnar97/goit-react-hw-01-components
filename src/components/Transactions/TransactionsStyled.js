@@ -8,11 +8,11 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   border: none;
   padding: 10px 15px;
   background: #ededed;
-  font-size: 14px;
+  font-size: 18px;
   border-top: 1px solid #ddd;
 `;
 

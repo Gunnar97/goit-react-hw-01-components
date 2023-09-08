@@ -32,7 +32,7 @@ export const FriendStatus = styled.span`
   border-radius: 50%;
   display: inline-block;
   margin-right: 8px;
-  background-color: ${props => (props.isOnline ? 'green' : 'red')};
+  background-color: ${props => (props.$status ? 'green' : 'red')};
   margin-right: 24px;
 `;
 
